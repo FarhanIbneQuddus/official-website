@@ -22,10 +22,10 @@ const Header = () => {
         ? 'bg-black/90 backdrop-blur-md shadow-lg' 
         : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-3">
-            <Sword className="h-8 w-8 text-red-600" />
+            <img src='/logo.png' className="p-2 h-[4em] w-auto" />
             <span className="text-white text-xl font-bold">Demon Slayer</span>
           </div>
           
