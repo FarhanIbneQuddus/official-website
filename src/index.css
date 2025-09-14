@@ -66,3 +66,11 @@
               text-decoration-color 0.2s ease, fill 0.2s ease, stroke 0.2s ease,
               opacity 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
