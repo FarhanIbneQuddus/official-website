@@ -97,7 +97,7 @@ const Trailer = () => {
                   <span>Audio: {currentTrailer.audio} ({isMuted ? 'Muted' : 'Unmuted'})</span>
                 </button>
                 <button
-                  className="flex items-center space-x-2 text-white hover:text-red-500 transition-colors duration-200 border border-red-600 rounded px-3 py-1 ml-2"
+                  className="flex items-center space-x-2 text-white hover:text-red-500 transition-colors duration-200 rounded px-3 py-1 ml-2"
                   onClick={() => setCurrentTrailer(TRAILERS[0])}
                   disabled={currentTrailer.youtubeId === TRAILERS[0].youtubeId}
                   title="Back to Main Trailer"
