@@ -7,23 +7,23 @@ const Tickets = () => {
 
   const theaters = [
     {
-      name: 'AMC Empire 25',
-      address: '234 W 42nd St, New York, NY 10036',
-      rating: 4.5,
+      name: 'Star Cineplex',
+      address: 'Bashundhara City, on the 8th Floor at 13/3 Ka, Panthapath, Tejgaon, Dhaka 1205',
+      rating: 4.8,
       distance: '0.8 miles',
       showtimes: ['2:30 PM', '5:45 PM', '8:15 PM', '10:50 PM']
     },
     {
-      name: 'Regal Times Square',
-      address: '247 W 42nd St, New York, NY 10036',
+      name: 'Blockbuster Cinemas',
+      address: 'KA-244, Kuril, Progoti Shoroni, Dhaka',
       rating: 4.3,
       distance: '0.9 miles',
       showtimes: ['3:00 PM', '6:30 PM', '9:00 PM', '11:30 PM']
     },
     {
-      name: 'Cinemark Union Square',
-      address: '13 E 4th St, New York, NY 10012',
-      rating: 4.6,
+      name: 'Grand Sylhet Movie Theater',
+      address: 'Airport Rd, Sylhet',
+      rating: 4.7,
       distance: '1.2 miles',
       showtimes: ['2:15 PM', '5:00 PM', '7:45 PM', '10:20 PM']
     }
