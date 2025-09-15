@@ -44,11 +44,7 @@ const Hero = () => {
       
       <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
         <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-fade-in-up">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">
-            DEMON
-          </span>
-          <br />
-          <span className="text-white">SLAYER</span>
+          <img src="logo.png" alt="" className="mx-auto w-52 pt-5 md:w-auto opacity-80" />
         </h1>
         
         <p className="text-xl md:text-2xl mb-4 opacity-90 animate-fade-in-up animation-delay-300">
