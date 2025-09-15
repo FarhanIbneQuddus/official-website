@@ -22,24 +22,14 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="prose prose-lg text-gray-300">
-              <p className="text-xl leading-relaxed">
-                Set after the events of the Demon Slayer: Mugen Train Arc, 
-                Tanjiro Kamado and his friends join the Flame Hashira Kyojuro Rengoku 
-                to investigate a series of disappearances aboard the mysterious Mugen Train.
+              <p className="text-xl leading-relaxed"> 
+                Set after the events of the Demon Slayer: Swordsmith Village Arc, the battle against Muzan Kibutsuji reaches a new, terrifying stage. The enigmatic Infinity Castle, his ever-shifting fortress, is unleashed, scattering the Demon Slayer Corps and trapping them within its endless, chaotic labyrinth. 
               </p>
-              
               <p className="text-lg leading-relaxed">
-                As they delve deeper into the supernatural occurrences, they discover 
-                that a powerful demon has been manipulating the dreams of passengers, 
-                trapping them in eternal slumber. With lives hanging in the balance, 
-                our heroes must overcome their greatest fears and unite their strength 
-                to defeat this otherworldly threat.
+                Separated and disoriented, the Hashira are forced into fierce one-on-one battles against the Upper Ranks of the Twelve Kizuki. Each confrontation is a desperate struggle for survival, pushing the slayers to their absolute limits and beyond as they face demons with unimaginable powers and tragic pasts.
               </p>
-              
               <p className="text-lg leading-relaxed">
-                This epic continuation of the Demon Slayer saga combines breathtaking 
-                animation with heart-pounding action, delivering an unforgettable 
-                cinematic experience that pushes the boundaries of anime filmmaking.
+                This monumental cinematic event delivers the most breathtaking animation and intense battles in the series' history, raising the stakes to their peak as the final war for humanity's survival begins.
               </p>
             </div>
             
