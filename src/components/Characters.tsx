@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Sword, Shield, Flame, Wind } from 'lucide-react';
+import { Sword, Shield, Skull} from 'lucide-react';
 
 const Characters = () => {
   const scrollContainerRef = useRef(null);
@@ -23,7 +23,7 @@ const Characters = () => {
       description: 'A kind-hearted young man who becomes a demon slayer to save his sister Nezuko.',
       icon: Sword,
       color: 'from-green-500 to-emerald-600',
-      video: '/public/Tanjiro.mp4'
+      video: 'Tanjiro.mp4'
     },
     {
       name: 'Nezuko Kamado',
@@ -31,23 +31,7 @@ const Characters = () => {
       description: 'Tanjiro\'s younger sister who was turned into a demon but retains her humanity.',
       icon: Shield,
       color: 'from-pink-500 to-rose-600',
-      video: '/public/Tanjiro.mp4'
-    },
-    {
-      name: 'Kyojuro Rengoku',
-      role: 'Flame Hashira',
-      description: 'The enthusiastic Flame Hashira with an unbreakable spirit and fiery determination.',
-      icon: Flame,
-      color: 'from-orange-500 to-red-600',
-      video: '/public/Tanjiro.mp4'
-    },
-    {
-      name: 'Inosuke Hashibira',
-      role: 'Demon Slayer',
-      description: 'A wild and aggressive fighter who was raised by boars in the mountains.',
-      icon: Sword,
-      color: 'from-blue-500 to-indigo-600',
-      video: '/public/Tanjiro.mp4'
+      video: 'Nezuko.mp4'
     },
     {
       name: 'Zenitsu Agatsuma',
@@ -55,7 +39,47 @@ const Characters = () => {
       description: 'A wild and aggressive fighter who was raised by boars in the mountains.',
       icon: Sword,
       color: 'from-blue-500 to-indigo-600',
-      video: '/public/Tanjiro.mp4'
+      video: 'Zenitsu.mp4'
+    },
+    {
+      name: 'Inosuke Hashibira',
+      role: 'Demon Slayer',
+      description: 'A wild and aggressive fighter who was raised by boars in the mountains.',
+      icon: Sword,
+      color: 'from-blue-500 to-indigo-600',
+      video: 'Inosuke.mp4'
+    },
+    {
+      name: 'Tomioka Giyu',
+      role: 'Water Hashira',
+      description: 'The nonchalant low self-esteemed water hashira & creator of the 11th form.',
+      icon: Sword,
+      color: 'from-orange-500 to-red-600',
+      video: 'Giyuu.mp4'
+    },
+    {
+      name: 'Kocho Shinobu',
+      role: 'Insect Hashira',
+      description: 'The venomous, perpetually smiling insect hashira & master of pharmaceutical combat.',
+      icon: Sword,
+      color: 'from-purple-500 to-indigo-600',
+      video: 'Shinobu.mp4'
+    },
+    {
+      name: 'Doma',
+      role: 'Upper Rank Two',
+      description: 'The emotionless, charismatic cult leader who consumes without mercy or pleasure.',
+      icon: Skull, 
+      color: 'from-blue-400 to-cyan-500',
+      video: 'Doma.mp4'
+    },
+    {
+      name: 'Akaza',
+      role: 'Upper Rank Three',
+      description: 'A powerful and prideful fighter who respects strength and challenges the strong.',
+      icon: Skull,
+      color: 'from-pink-500 to-rose-700',
+      video: 'Akaza.mp4'
     }
   ];
 

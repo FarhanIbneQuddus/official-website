@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, Sword } from 'lucide-react';
 
 const Header = () => {
@@ -16,6 +16,28 @@ const Header = () => {
 
   const navItems = ['Home', 'About', 'Characters', 'Trailer', 'Tickets'];
 
+  // Audio toggle state and ref
+  const [isAudioPlaying, setIsAudioPlaying] = useState(false);
+  const [isIndicatorActive, setIsIndicatorActive] = useState(false);
+  const audioElementRef = useRef<HTMLAudioElement>(null);
+
+  // Toggle audio and indicator
+  const toggleAudioIndicator = () => {
+    setIsAudioPlaying((prev) => !prev);
+    setIsIndicatorActive((prev) => !prev);
+  };
+
+  // Manage audio playback
+  useEffect(() => {
+    if (audioElementRef.current) {
+      if (isAudioPlaying) {
+        audioElementRef.current.play();
+      } else {
+        audioElementRef.current.pause();
+      }
+    }
+  }, [isAudioPlaying]);
+
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${
       isScrolled 
@@ -26,10 +48,10 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-3">
             <img src='/logo.png' className="p-2 h-[4em] w-auto" />
-            <span class="text-white text-xl font-bold font-['Arial_Black'] tracking-wider uppercase rounded-md px-3 py-1 ">KIMETSU NO YAIBA</span>
+            <span className="text-white text-xl font-bold font-['Arial_Black'] tracking-wider uppercase rounded-md px-3 py-1 ">KIMETSU NO YAIBA</span>
           </div>
           
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-8 items-center">
             {navItems.map((item) => (
               <a
                 key={item}
@@ -39,14 +61,35 @@ const Header = () => {
                 {item}
               </a>
             ))}
+            {/* Audio toggle button with indicator */}
+            <button
+              onClick={toggleAudioIndicator}
+              className="ml-8 flex items-center space-x-1 group"
+              title={isAudioPlaying ? 'Pause Audio' : 'Play Audio'}
+            >
+              <audio
+                ref={audioElementRef}
+                className="hidden"
+                src="/audio/loop.mp3"
+                loop
+              />
+              {[1, 2, 3, 4].map((bar) => (
+                <div
+                  key={bar}
+                  className={`w-1 h-5 mx-0.5 rounded bg-red-500 transition-all duration-300 ${isIndicatorActive ? 'animate-audio-bar' : 'opacity-50'}`}
+                  style={{ animationDelay: `${bar * 0.1}s` }}
+                />
+              ))}
+            </button>
           </nav>
-          
+
           <button
             className="md:hidden text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
+
         </div>
       </div>
       
