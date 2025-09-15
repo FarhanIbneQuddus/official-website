@@ -13,7 +13,7 @@ const Hero = () => {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/bg.mp4" type="video/mp4" />
+          <source src="bg.mp4" type="video/mp4" />
           {/* Fallback image if video fails to load */}
           <img
             src="https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"

@@ -47,7 +47,7 @@ const Header = () => {
       <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-3">
-            <img src='/logo.png' className="p-2 h-[4em] w-auto" />
+            <img src="logo.png" className="p-2 h-[4em] w-auto" />
             <span className="text-white text-xl font-bold font-['Arial_Black'] tracking-wider uppercase rounded-md px-3 py-1 ">KIMETSU NO YAIBA</span>
           </div>
           

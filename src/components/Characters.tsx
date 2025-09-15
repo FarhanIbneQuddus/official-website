@@ -39,7 +39,7 @@ const Characters = () => {
       description: 'A wild and aggressive fighter who was raised by boars in the mountains.',
       icon: Sword,
       color: 'from-blue-500 to-indigo-600',
-      video: 'Zenitsu.mp4'
+      video: '/Zenitsu.mp4'
     },
     {
       name: 'Inosuke Hashibira',
