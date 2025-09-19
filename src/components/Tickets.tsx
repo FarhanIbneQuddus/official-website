@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { MapPin, Calendar, Clock, Star, Ticket } from 'lucide-react';
+import { MapPin, Clock, Star, Ticket } from 'lucide-react';
+import PaymentModal from './PaymentModal.tsx';
 
 const Tickets = () => {
   const [selectedTheater, setSelectedTheater] = useState(0);
-  const [selectedShowtime, setSelectedShowtime] = useState(null);
+  const [selectedShowtime, setSelectedShowtime] = useState<string | null>(null);
+  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
 
   const theaters = [
     {
@@ -29,7 +31,24 @@ const Tickets = () => {
     }
   ];
 
+  // CHANGED: Added function to handle payment flow initiation
+  const handleContinueToPayment = () => {
+    if (selectedShowtime) {
+      setIsPaymentModalOpen(true);
+    }
+  };
+
+  // CHANGED: Added booking details object for payment modal
+  const bookingDetails = {
+    movie: 'Demon Slayer: Infinity Castle',
+    theater: theaters[selectedTheater].name,
+    date: 'Today, March 15',
+    time: selectedShowtime ? theaters[selectedTheater].showtimes[parseInt(selectedShowtime.split('-')[1])] : '',
+    total: 17.00
+  };
+
   return (
+    <>
     <section id="tickets" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -168,6 +187,8 @@ const Tickets = () => {
                     : 'bg-gray-700 text-gray-400 cursor-not-allowed'
                 }`}
                 disabled={!selectedShowtime}
+                // CHANGED: Updated button click handler to open payment modal
+                onClick={handleContinueToPayment}
               >
                 {selectedShowtime ? 'Continue to Payment' : 'Select Showtime'}
               </button>
@@ -180,6 +201,13 @@ const Tickets = () => {
         </div>
       </div>
     </section>
+    {/* PaymentModal component with props */}
+    <PaymentModal
+      isOpen={isPaymentModalOpen}
+      onClose={() => setIsPaymentModalOpen(false)}
+      bookingDetails={bookingDetails}
+    />
+    </>
   );
 };
 
